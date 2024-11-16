@@ -34,4 +34,4 @@ Note that using packages with different versions will very likely lead to compat
 If you have any problems related to HW4, you may
 - Use TA hours
 - Contact TAs by e-mail ([ntudlcv@gmail.com](mailto:ntudlcv@gmail.com))
-- Post your question under NTU COOL hw4 discussion.
+- Post your question under HW4 discussion section on NTU COOL.
