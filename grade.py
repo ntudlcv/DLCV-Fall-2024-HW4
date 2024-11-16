@@ -1,7 +1,7 @@
 import sys
 import os
 import glob
-from tqdm import tqdm, trange
+from tqdm import tqdm
 import scipy.signal
 import imageio
 import numpy as np
@@ -90,11 +90,9 @@ def render_viewpoints(test_image_path, gt_image_path):
     for i in tqdm(range(len(img_paths))):
         rgb = imageio.v2.imread(img_paths[i])
         rgb = (np.array(rgb)/255.).astype(np.float32)[...,:3]
-        # rgb = rgb[...,:3]*rgb[...,-1:]
 
         gt = imageio.v2.imread(gt_paths[i])
         gt = (np.array(gt)/255.).astype(np.float32)[...,:3]
-        # gt = gt[...,:3]*gt[...,-1:] + (1.-gt[...,-1:])
 
         p = -10. * np.log10(np.mean(np.square(rgb - gt)))
         psnrs.append(p)
